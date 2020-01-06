@@ -1,0 +1,227 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #333;
+    background-color: #f4f4f4;
+   
+}
+
+body:before {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #324c60;
+    content: "";
+    z-index: 0;
+}
+
+
+
+header#cabecalho {
+border-bottom: 0px #606060 solid;
+height: 0px;
+}
+
+header#cabecalho h1 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	padding: 0px;
+	margin-bottom: -10px;
+}
+
+header#cabecalho h2 {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #888888;
+	font-size: 15pt;
+	padding: 0px;
+	margin-top: -5px;
+
+}
+
+/* Formatação do Menu */
+
+nav#menu {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 700px;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+    margin-top: 0px;
+    padding: 0px;
+	
+}
+
+nav#menu ul {
+	list-style: none;
+	text-transform: capitalize;
+	text-decoration:inherit;
+	text-align: center;
+	
+}
+
+nav#menu li {
+	display: inline-block;
+	background-color: #dddddd;
+	padding: 10px;
+	margin: 2px;
+	transition: 1s;
+
+}
+
+nav#menu li:hover {
+	background-color: #606060;
+}
+
+nav#menu h1 {
+	display: none;
+}
+
+nav#menu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+nav#menu a:hover {
+	color: #ffffff;
+	text-decoration:underline;
+}
+
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+a {
+    color: #128ff2;
+}
+
+
+.upload-header {
+    border-bottom: 1px solid #ececec;
+}
+
+.upload-header h2 {
+    font-weight: 500;
+}
+
+.upload-container {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff;
+      box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+      margin-top: 60px;
+      min-height: 400px;
+      position: relative;
+      padding: 20px;
+}
+
+.upload-header {
+    border-bottom: 1px solid #ececec;
+}
+
+.upload-header h2 {
+    font-weight: 500;
+}
+
+.single-upload {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}

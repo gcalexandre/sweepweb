@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>Sweep Web</title>
+<link rel="stylesheet" href="css/main.css" />
+
+
+</head>
+<meta charset="UTF-8">
+<title>SWeeP Web</title>
+</head>
+
+<body>
+	<noscript>
+		<h2>Sorry! Your browser doesn't support Java script</h2>
+	</noscript>
+	<div id="interface">
+		<header id="cabecalho">
+			<hgroup>
+			</hgroup>
+			<nav id="menu">
+				<h1>Menu Principal</h1>
+				<ul type="disc">
+					<li><a href="index.html"><strong>SWeeP</strong></a></li>
+					<li><a href="multifastaCreator.html">Multifasta Creator</a></li>
+<!--				<li><a href="publicWorks.html">Public Works</a></li> -->
+					<li><a href="login.html">Login</a></li>
+					<li><a href="newUser.html">Register</a></li>
+<!--				<li><a href="help.html" target="_blank">help</a></li> -->
+				</ul>
+			</nav>
+		</header>
+
+
+		<div class="upload-container">
+			<div class="upload-header">
+				<h3>SWeeP WEB</h3>
+			</div>
+
+			<div class="upload-content">
+				<div class="single-upload">
+					<form id="singleUploadForm" name="singleUploadForm">
+						<p>Select a single multifasta -> Maximum file size = 200MB</p>
+						<input id="singleFileUploadInput" type="file" name="file"
+							class="file-input" required />
+						<button id="bnt-send" type="submit" class="primary submit-btn">Submit</button>
+						<br>
+						<progress id="progress" value="0"></progress>
+					</form>
+					<div class="upload-response">
+						<div id="singleFileUploadError"></div>
+						<div id="singleFileUploadSuccess"></div>
+					</div>
+				</div>
+				<div class="sweep-btn">
+					<form>
+						Job Name (optional)<br>
+						<textarea id="jobName" maxlength="60" rows="1 " cols="60"></textarea>
+					</form>
+
+					<button id="btnprocess" class="primary submit-btn">Create</button>
+
+
+				</div>
+
+
+				<div id="processing">
+					<span id="wait">Wait processing...</span>
+				</div>
+				<div id="resultProcess"></div>
+				<div class="parameters">
+					<h3>
+						Parameters<br>
+					</h3>
+					Type: <select id=typelist>
+						<option value="NT">NT</option>
+						<option value="AA" selected="selected">AA</option>
+					</select> &nbsp;&nbsp;&nbsp;Generate Phylogenetic tree: <select
+						id=generateTree>
+						<option value="True">Yes</option>
+						<option value="False" selected="selected">No</option>
+					</select> It will take several minutes to run. <br> <br> Selected
+					Distance Method: <select id=distanceList>
+						<option value="Spearman">Spearman</option>
+						<option value="Euclidean" selected="selected">Euclidian</option>
+						<option value="Cosine">Cosine</option>
+					</select> 
+				</div>
+				<br>
+
+				<h3 style="display: inline;">Advanced parameters</h3>
+				<button id="parameters-content-btn" class="advanced-content-btn">+</button>
+				<br> <br>
+				<div class="parameters-content" id="parameters-content-div">
+					Mask: <select id=maskList>
+						<option value="1,1,3">[1 1 3]</option>
+						<option value="2,0,2">[2 0 2]</option>
+						<option value="2,1,2" selected="selected">[2 1 2]</option>
+						<option value="2,0,3">[2 0 3]</option>
+						<option value="3,0,1">[3 0 1]</option>
+						<option value="3,0,2">[3 0 2]</option>
+						<option value="3,1,1">[3 1 1]</option>
+						<option value="4,7,4">[4 7 4]</option>
+					</select>&nbsp;&nbsp;&nbsp; Projection: <select id=projectionList>
+						<option value="100">100</option>
+						<option value="200">200</option>
+						<option value="400">400</option>
+						<option value="600" selected="selected">600</option>
+						<option value="900">900</option>
+						<option value="1200">1200</option>
+						<option value="1500">1500</option>
+						<option value="1800">1800</option>
+						<option value="2100">2100</option>
+						<option value="2400">2400</option>
+						<option value="2700">2700</option>
+						<option value="3000">3000</option>
+					</select> &nbsp;&nbsp;&nbsp;
+				</div>
+				<br>
+
+				
+			</div>
+		</div>
+		<script src="/js/jquery.js"></script>
+		<script src="/js/main.js"></script>
+	</div>
+
+
+</body>
+</html>

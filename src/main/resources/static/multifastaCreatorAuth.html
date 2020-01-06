@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>Sweep Web</title>
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<meta charset="UTF-8">
+<title>SWeeP Web Multifasta Creator</title>
+</head>
+
+<body>
+	<noscript>
+		<h2>Sorry! Your browser doesn't support Java script</h2>
+	</noscript>
+	<div id="interface">
+		<header id="cabecalho">
+			<hgroup>
+			</hgroup>
+			<nav id="menu">
+				<h1>Menu Principal</h1>
+				<ul type="disc">
+					<li><a href="indexAuth.html">SWeeP </a></li>
+					<li><a href="multifastaCreatorAuth.html"><strong>Multifasta	Creator</strong></a></li>
+		<!--  		<li><a href="publicWorks.html">Public Works</a></li> -->
+					<li><a href="yourtasksauth.html">MySweep</a></li>
+		<!--    	<li><a href="help.html" target="_blank">help</a></li> -->
+				</ul>
+			</nav>
+		</header>
+
+		<div class="upload-container">
+			<div class="upload-header">
+			<p style="text-align:right">Logged: <span style="color:darkolivegreen;font-weight:bold" id="conteudo"></span>&nbsp;|
+			<a href="#void" onclick="logout();">Logout</a>&nbsp;|
+		<!--<a href="reset.html" >Alter Password</a></p> -->
+				<h3>Multifasta Creator</h3>
+			</div>
+
+			<div class="upload-content">
+				<div class="single-upload">
+
+					<form id="singleUploadForm" name="singleUploadForm"
+						enctype="multipart/form-data" method="post">
+						<p>Select the "file.zip" with multiple multifasta files (one
+							by organism).</p>
+						<p>The fasta files must be at the root of the zip file.</p>
+						<p>The headers of the new fasta will be the names of the
+							original fastas files without special characters. So rename your
+							fastas and replace spaces with "_" underline.</p>
+						<p>Maximum file size = 200MB</p>
+						<input id="singleFileUploadInput" type="file" name="file"
+							class="file-input" required />
+						<button id="bnt-send" type="submit" class="primary submit-btn">Submit</button>
+						<br>
+						<progress id="progress" value="0"></progress>
+						<span id="display"></span>
+					</form>
+					<div class="upload-response">
+						<div id="singleFileUploadError"></div>
+						<div id="singleFileUploadSuccess"></div>
+					</div>
+				</div>
+
+				<div class="sweep-btn">
+					<form>
+						Job Name: the results will have this name. <br> <br>
+						<textarea id="jobName" maxlength="20" rows="1 " cols="42"></textarea>
+					</form>
+					<button id="btncreatemultifasta" class="primary submit-btn">Create</button>
+				</div>
+			</div>
+			<div id="processing">
+				<span>Wait processing...</span>
+			</div>
+			<div id="resultProcessMultifasta"></div>
+			<div class="parameters">
+				<h3>Parameters</h3>
+				Type: <select id=typelist>
+					<option value="NT">NT</option>
+					<option value="AA" selected="selected">AA</option>
+				</select>
+			</div>
+			<br>
+
+		</div>
+	</div>
+
+	<script src="/js/jquery.js"></script>
+	<script src="/js/multifastaAuth.js"></script>
+
+</body>
+</html>
